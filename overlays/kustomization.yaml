@@ -1,0 +1,17 @@
+
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: argocd
+
+bases:
+  - github.com/redhat-canada-gitops/argocd/argocd/overlays/default
+
+patchesJson6902:
+  # Patch the BuildConfig to output to the correct ImageStream.
+  - target:
+      group: argoproj.io
+      version: v1alpha1
+      kind: ArgoCD
+      name: argocd
+    path: rbac-patch.yaml
