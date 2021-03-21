@@ -7,4 +7,4 @@ namespace: argocd
 resources:
   - petclinic-project.yaml
   - petclinic-app-dev.yaml
-  - petclinic-app-test.yaml
+  - petclinic-app-prod.yaml
