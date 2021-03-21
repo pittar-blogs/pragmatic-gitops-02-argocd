@@ -1,7 +1,7 @@
 kind: Application
 apiVersion: argoproj.io/v1alpha1
 metadata:
-  name: petclinic-test
+  name: petclinic-prod
   namespace: argocd
 spec:
   destination:
@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: petclinic
   source:
-    path: overlays/test
+    path: overlays/prod
     repoURL: https://github.com/pittar-blogs/pragmatic-gitops-01-kustomize.git
     targetRevision: main
   syncPolicy:
