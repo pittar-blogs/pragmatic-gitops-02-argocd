@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    namespace: petclinic-prod
+    namespace: gitops-prod
     server: https://kubernetes.default.svc
   project: petclinic
   source:
